@@ -27,7 +27,17 @@ $(document).ready(function($) {
     mySwiper.slideTo($(this).data("slIndex"), 4, false);
     $(".slideContainer").addClass("show");
   });
-  $(".close").click(function(event) {
+  $(".hamburger").click(function(e){
+    $("body").addClass("noScroll");
+    $(".navcontainer").addClass("show");
+  });
+
+  $("#closemenu").click(function(e){
+    $(".navcontainer").removeClass("show");
+    $("body").removeClass("noScroll");
+  });
+
+  $("#closeswiper").click(function(event) {
     /* Act on the event */
     $(".slideContainer").removeClass("show");
     $("body").removeClass("noScroll");
