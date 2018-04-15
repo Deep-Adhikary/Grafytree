@@ -1,11 +1,11 @@
-$(document).ready(function($) {
+$(document).ready(function ($) {
   var slideIndex = 0;
-  $(".toslide").each(function(index) {
+  $(".toslide").each(function (index) {
     $(this).data("slIndex", slideIndex);
     $(".swiper-wrapper").append(
       '<div class="swiper-slide"><img  src="' +
-        $(this).attr("src") +
-        '" alt=""></div>'
+      $(this).attr("src") +
+      '" alt=""></div>'
     );
     slideIndex++;
   });
@@ -21,23 +21,23 @@ $(document).ready(function($) {
     speed: 600,
     loop: false
   });
-  $(".toslide").click(function(e) {
+  $(".toslide").click(function (e) {
     /* Act on the event */
     $("body").addClass("noScroll");
     mySwiper.slideTo($(this).data("slIndex"), 4, false);
     $(".slideContainer").addClass("show");
   });
-  $(".hamburger").click(function(e){
+  $(".hamburger").click(function (e) {
     $("body").addClass("noScroll");
     $(".navcontainer").addClass("show");
   });
 
-  $("#closemenu").click(function(e){
+  $("#closemenu").click(function (e) {
     $(".navcontainer").removeClass("show");
     $("body").removeClass("noScroll");
   });
 
-  $("#closeswiper").click(function(event) {
+  $("#closeswiper").click(function (event) {
     /* Act on the event */
     $(".slideContainer").removeClass("show");
     $("body").removeClass("noScroll");
