@@ -29,7 +29,7 @@ div.topsection {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 10em;
+  height: 5em;
   font-family: "Cormorant Garamond", serif;
   -webkit-box-shadow: -1px 3px 3px -3px rgba(51, 51, 51, 0.67);
   -moz-box-shadow: -1px 3px 3px -3px rgba(51, 51, 51, 0.67);
@@ -58,11 +58,15 @@ div.brdr {
   margin: 0 auto;
   margin-top: 15px;
   border-top: 1px solid #d6d6d6;
+  display: none;
 }
 nav {
   margin-top: 1.5em;
   height: 1.5em;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 28px;
+  z-index: 12;
 }
 nav > div.navcontainer > ul {
   text-align: center;
@@ -145,6 +149,11 @@ span.hamburger {
   }
 }
 @media (min-width: 992px) {
+  nav {
+    position: relative;
+    top: 0;
+    z-index: 0;
+  }
   nav > div.navcontainer > ul {
     display: block;
   }
@@ -168,6 +177,12 @@ span.hamburger {
     align-items: center;
     justify-content: center;
   }
+  div.topsection {
+    height: 10em;
+  }
+  div.brdr {
+    display: block;
+  }
 }
 @media (min-width: 1200px) {
   nav > div.navcontainer > ul {
@@ -183,6 +198,12 @@ span.hamburger {
   }
   nav > div.navcontainer > ul li:first-child {
     padding-left: 0px;
+  }
+  div.topsection {
+    height: 10em;
+  }
+  div.brdr {
+    display: block;
   }
 }
 /*********************************************/
