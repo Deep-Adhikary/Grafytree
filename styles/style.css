@@ -1,5 +1,6 @@
 body {
   background-color: #fcfcfc;
+  min-width: 300px;
 }
 * {
   box-sizing: border-box;
@@ -35,7 +36,10 @@ div.topsection {
   -moz-box-shadow: -1px 3px 3px -3px rgba(51, 51, 51, 0.67);
   box-shadow: -1px 3px 3px -3px rgba(51, 51, 51, 0.67);
 }
-div.topsection > h1 {
+div.topwraper{
+	width: 300px;
+}
+div.topsection  h1 {
   margin: 0 auto;
   text-align: center;
   padding-top: 0.8em;
@@ -43,12 +47,12 @@ div.topsection > h1 {
   font-weight: 100;
   color: #3a3a3a;
 }
-div.topsection > h3 {
+div.topsection  h3 {
   margin: 0 auto;
   text-align: center;
   font-weight: 300;
   font-size: 0.8em;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   color: #777777;
   padding-top: 0.08em;
   font-family: "Open Sans Condensed", sans-serif;
@@ -63,10 +67,10 @@ div.brdr {
 nav {
   margin-top: 1.5em;
   height: 1.5em;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 28px;
-  z-index: 12;
+
 }
 nav > div.navcontainer > ul {
   text-align: center;
@@ -78,7 +82,7 @@ div.navcontainer a#closemenu {
 div.navcontainer.show a#closemenu {
   display: block;
   top: 20px;
-  right: 12px;
+  right: 20px;
 }
 div.navcontainer.show > ul {
   display: block;
@@ -93,7 +97,7 @@ nav > div.navcontainer.show {
   left: 0;
   margin: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -108,7 +112,7 @@ nav > div.navcontainer > ul li {
 nav > div.navcontainer > ul li > a {
   text-decoration: none;
   font-family: "Tangerine", cursive;
-  font-size: 1.6em;
+  font-size: 2em;
   color: #2f2f2f;
   border-bottom: 1px solid transparent;
   transition: all 0.5s;
@@ -125,12 +129,13 @@ span.hamburger {
   display: block;
   position: absolute;
   padding: 0.6em;
-  right: 15px;
+  right: 8px;
   bottom: 0px;
   border: 1px solid #d4d4d4;
   border-radius: 2px;
   font-size: 1.3em;
   cursor: pointer;
+  background-color: #efefef;
 }
 @media (min-width: 576px) {
   nav > div.navcontainer.show > ul {
@@ -139,6 +144,9 @@ span.hamburger {
   span.hamburger {
     display: block;
   }
+  div.topwraper{
+	width: auto;
+	}
 }
 @media (min-width: 768px) {
   nav > div.navcontainer.show > ul {
@@ -183,7 +191,11 @@ span.hamburger {
   div.brdr {
     display: block;
   }
+  nav > div.navcontainer > ul li > a{
+	  font-size: 1.6em;
+  }
 }
+
 @media (min-width: 1200px) {
   nav > div.navcontainer > ul {
     display: block;
@@ -272,7 +284,7 @@ div.imgcenter img:hover {
 @media (min-width: 768px) {
   div.col4 {
     margin: 3px 3px;
-    width: calc((100% - 25px) / 2);
+    width: calc((100% - 12px) / 2);
     height: calc(100vw / 2);
   }
 }
