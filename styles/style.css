@@ -70,7 +70,6 @@ nav {
   position: absolute;
   width: 100%;
   top: 28px;
-
 }
 nav > div.navcontainer > ul {
   text-align: center;
@@ -701,6 +700,9 @@ div.slideContainer.show > .close {
 .swiper-button-prev {
   display: none;
 }
+#closeswiper{
+	right: 5px;
+}
 @media (min-width: 576px) {
   .swiper-button-next {
     display: none;
@@ -708,6 +710,9 @@ div.slideContainer.show > .close {
   .swiper-button-prev {
     display: none;
   }
+  #closeswiper{
+	right: 5px;
+}
 }
 @media (min-width: 768px) {
   .swiper-button-next {
@@ -716,6 +721,9 @@ div.slideContainer.show > .close {
   .swiper-button-prev {
     display: block;
   }
+  #closeswiper{
+	right: 15px;
+}
 }
 @media (min-width: 992px) {
   .swiper-button-next {
@@ -724,6 +732,9 @@ div.slideContainer.show > .close {
   .swiper-button-prev {
     display: block;
   }
+  #closeswiper{
+	right: 15px;
+}
 }
 @media (min-width: 1200px) {
   .swiper-button-next {
@@ -732,6 +743,9 @@ div.slideContainer.show > .close {
   .swiper-button-prev {
     display: block;
   }
+  #closeswiper{
+	right: 15px;
+}
 }
 /*****************************************/
 
